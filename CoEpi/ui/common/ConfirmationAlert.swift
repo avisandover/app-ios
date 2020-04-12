@@ -12,18 +12,12 @@ struct ConfirmationAlert {
 
         alertController.addAction(
             UIAlertAction(title: noText, style: .default, handler: { action in
-                DispatchQueue.main.async {
-                   viewController.dismiss(animated: true, completion: nil)
-                   noAction()
-                }
+                noAction()
         }))
 
         alertController.addAction(
             UIAlertAction(title: yesText, style: .default, handler: { action in
-                DispatchQueue.main.async {
-                    viewController.dismiss(animated: false, completion: nil)
-                    yesAction()
-            }
+                yesAction()
         }))
 
         viewController.present(alertController, animated: true, completion: nil)
